@@ -1,262 +1,173 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
-
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Portfolio BTech CSE</title>
-
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuvraj Arya - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <nav>
+    <div class="wrap nav-row">
+      <a href="#home" class="brand">Yuvraj Arya</a>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch to dark theme" title="Toggle theme">☀️</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">Menu</button>
+      <ul class="links" id="menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <div class="bg-shape bg-shape-1"></div>
-    <div class="bg-shape bg-shape-2"></div>
-
-
-    <nav class="glass-nav">
-        <div class="nav-container">
-            <a href="#hero" class="logo">&lt;Yuvraj Arya/&gt;</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="nav-controls">
-                <button id="theme-toggle" aria-label="Toggle Theme">
-                    <i class="fa-solid fa-sun"></i>
-                </button>
-                <div class="hamburger">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </div>
+  <main id="home">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="reveal">
+          <span class="chip">Portfolio 2026</span>
+          <h1>My Portfolio</h1>
+          <p class="lead">
+            Welcome to my portfolio. I am Yuvraj Arya, a BTech CSE student.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="#projects">See Projects</a>
+            <a class="btn" href="#contact">Contact Me</a>
+          </div>
         </div>
-    </nav>
-
-
-    <section id="hero" class="container">
-        <div class="hero-content hidden">
-            <h1>Hi, I'm <span class="highlight">Yuvraj Arya</span></h1>
-            <h2>BTech CSE Student 🚀</h2>
-            <p>
-            </p>
-            <div class="hero-btns">
-                <a href="#contact" class="btn primary-btn">Contact Me</a>
-                <a href="#projects" class="btn secondary-btn">View Work</a>
-            </div>
+        <div class="card reveal">
+          <h2>Quick Profile</h2>
+          <p>I am Yuvraj Arya, a BTech CSE student. I am interested in exploring new technologies and learning new things.</p>
+          <div class="kpis">
+            <div class="kpi"><strong>1</strong><span>Projects</span></div>
+            <div class="kpi"><strong>2</strong><span>Technical stack</span></div>
+            <div class="kpi"><strong>5</strong><span>Interests</span></div>
+            <div class="kpi"><strong>∞</strong><span>Curiosity</span></div>
+          </div>
         </div>
-        <div class="hero-image hidden">
-
-            <img src="https://via.placeholder.com/400x400/6c63ff/ffffff?text=Profile+Pic" alt="Profile Picture">
-        </div>
+      </div>
     </section>
 
-
-    <section id="about" class="container">
-        <h2 class="section-title hidden">About Me</h2>
-        <div class="about-content glass-card hidden">
-            <p>xyz!</p>
-        </div>
+    <section id="about">
+      <div class="wrap reveal">
+        <span class="chip">About</span>
+        <h2>Who I am</h2>
+        <p>
+          I study at Dr. A.P.J. Abdul Kalam Institute of Technology, Tanakpur. I enjoy learning new things and exploring new technologies.
+        </p>
+      </div>
     </section>
 
-
-    <section id="education" class="container">
-        <h2 class="section-title hidden">Education</h2>
-        <div class="timeline hidden">
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content glass-card">
-                    <h3>BTech in Computer Science & Engineering</h3>
-                    <h4>Dr. A.P.J. Abdul Kalam Institute Of Technology, Tanakpur</h4>
-                    <span class="date">Present</span>
-                    <p>Currently pursuing my bachelor's degree in Computer Science & Engineering.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content glass-card">
-                    <h3>12th Grade (Intermediate)</h3>
-                    <h4>Queens Public School, Haldwani</h4>
-                    <span class="date">Passed</span>
-                    <p></p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content glass-card">
-                    <h3>10th Grade (High School)</h3>
-                    <h4>Queens Public School, Haldwani</h4>
-                    <span class="date">Passed</span>
-                    <p></p>
-                </div>
-            </div>
-
+    <section id="education">
+      <div class="wrap reveal">
+        <span class="chip">Education</span>
+        <h2>Academic journey</h2>
+        <div class="timeline">
+          <article class="row">
+            <h3>BTech - Computer Science and Engineering</h3>
+            <small>Dr. A.P.J. Abdul Kalam Institute of Technology, Tanakpur - Present</small>
+          </article>
+          <article class="row">
+            <h3>12th Grade - Intermediate</h3>
+            <small>Queens Public School, Haldwani - Passed</small>
+          </article>
+          <article class="row">
+            <h3>10th Grade - High School</h3>
+            <small>Queens Public School, Haldwani - Passed</small>
+          </article>
         </div>
+      </div>
     </section>
 
-
-    <section id="skills" class="container">
-        <h2 class="section-title hidden">Technical Skills</h2>
-        <div class="skills-grid">
-
-            <div class="skill-category glass-card hidden">
-                <h3><i class="fa-solid fa-code"></i> Languages</h3>
-                <div class="tags">
-                    <span>C</span>
-                    <span>Python</span>
-                    <span>HTML / CSS</span>
-                    <span>Assembly (Learning)</span>
-                    <span>Sql</span>
-                </div>
+    <section id="skills">
+      <div class="wrap reveal">
+        <span class="chip">Skills</span>
+        <h2>Technical stack</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Languages</h3>
+            <div class="list" style="margin-top:10px;">
+              <span class="pill">C</span><span class="pill">Python</span><span class="pill">HTML/CSS</span><span class="pill">SQL</span><span class="pill">Assembly</span>
             </div>
-
-            <div class="skill-category glass-card hidden">
-                <h3><i class="fa-brands fa-linux"></i> Operating Systems</h3>
-                <div class="tags">
-                    <span>Windows</span>
-                    <span>Linux</span>
-                </div>
+          </div>
+          <div class="card">
+            <h3>Tools</h3>
+            <div class="list" style="margin-top:10px;">
+              <span class="pill">Git</span><span class="pill">GitHub</span><span class="pill">VS Code</span><span class="pill">CLI</span><span class="pill">Linux</span><span class="pill">Windows</span>
             </div>
-
-            <div class="skill-category glass-card hidden">
-                <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools</h3>
-                <div class="tags">
-                    <span>VS Code</span>
-                    <span>Git / GitHub</span>
-                    <span>Command Line</span>
-                    <span>Adobe Lightroom</span>
-                    <span>Canva</span>
-
-                </div>
-            </div>
-
+          </div>
         </div>
+      </div>
     </section>
 
-
-    <section id="hobbies" class="container">
-        <h2 class="section-title hidden">Hobbies & Interests</h2>
-        <div class="hobbies-grid">
-            <div class="hobby-card glass-card hidden">
-                <i class="fa-solid fa-guitar"></i>
-                <h3>Guitar</h3>
-            </div>
-            <div class="hobby-card glass-card hidden">
-                <i class="fa-solid fa-music"></i>
-                <h3>Music</h3>
-            </div>
-            <div class="hobby-card glass-card hidden">
-                <i class="fa-solid fa-gamepad"></i>
-                <h3>Gaming</h3>
-            </div>
-            <div class="hobby-card glass-card hidden">
-                <i class="fa-solid fa-pen-nib"></i>
-                <h3>Sketching</h3>
-            </div>
-            <div class="hobby-card glass-card hidden">
-                <i class="fa-solid fa-tv"></i>
-                <h3>Anime</h3>
-            </div>
-            <div class="hobby-card glass-card hidden">
-                <i class="fa-solid fa-camera"></i>
-                <h3>Photography</h3>
-            </div>
+    <section id="hobbies">
+      <div class="wrap reveal">
+        <span class="chip">Interests</span>
+        <h2>Hobbies and interests</h2>
+        <div class="hobby-grid">
+          <div class="hobby-item">Sketching</div>
+          <div class="hobby-item">Photography</div>
+          <div class="hobby-item">Music (Guitar)</div>
+          <div class="hobby-item">Reading</div>
+          <div class="hobby-item">Anime</div>
         </div>
+      </div>
     </section>
 
-
-    <section id="projects" class="container">
-        <h2 class="section-title hidden">Projects</h2>
-        <div class="projects-grid">
-
-            <div class="project-card glass-card hidden">
-                <div class="project-content">
-                    <h3>Portfolio website</h3>
-                    <p>My portfolio website.</p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <a href="#" class="btn secondary-btn"><i class="fa-brands fa-github"></i> View Code</a>
-                </div>
-            </div>
-
-            <div class="project-card glass-card hidden">
-                <div class="project-content">
-                    <h3>Project Title 2</h3>
-                    <p></p>
-                    <div class="project-tags">
-                        <span>C</span>
-                        <span>Assembly</span>
-                    </div>
-                    <a href="#" class="btn secondary-btn"><i class="fa-brands fa-github"></i> View Code</a>
-                </div>
-            </div>
-
+    <section id="projects">
+      <div class="wrap reveal">
+        <span class="chip">Projects</span>
+        <h2>Featured work</h2>
+        <div class="grid-2">
+          <article class="card project">
+            <h3>Portfolio Website</h3>
+            <p>Just a portfolio website to showcase my work and projects.</p>
+            <a class="btn" href="https://github.com/aryayuvraj007" target="_blank" rel="noreferrer">View Code</a>
+          </article>
+          <article class="card project">
+            <h3>coming soon</h3>
+            <p>wait for it!</p>
+            <a class="btn" href="https://github.com/aryayuvraj007" target="_blank" rel="noreferrer">View GitHub</a>
+          </article>
         </div>
+      </div>
     </section>
 
-
-    <section id="contact" class="container">
-        <h2 class="section-title hidden">Get In Touch</h2>
-        <div class="contact-wrapper hidden">
-            <div class="contact-info glass-card">
-                <h3>Contact Information</h3>
-                <p>Feel free to reach out to me.</p>
-
-                <div class="info-item">
-                    <i class="fa-solid fa-envelope"></i>
-                    <span>yuvrajarya656@gmail.com</span>
-                </div>
-
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/yuvraj-arya-b4967434a/" target="_blank"><i
-                            class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/aryayuvraj007" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.instagram.com/el.yuvraj/" target="_blank"><i
-                            class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-
-            <form class="contact-form glass-card" id="contactForm">
-                <div class="input-group">
-                    <input type="text" id="name" required placeholder=" ">
-                    <label for="name">Yuvraj Arya</label>
-                </div>
-                <div class="input-group">
-                    <input type="email" id="email" required placeholder=" ">
-                    <label for="email">yuvrajarya656@gmail.com</label>
-                </div>
-                <div class="input-group">
-                    <textarea id="message" rows="5" required placeholder=" "></textarea>
-                    <label for="message">Your Message</label>
-                </div>
-                <button type="submit" class="btn primary-btn">Send Message</button>
-            </form>
+    <section id="contact">
+      <div class="wrap reveal">
+        <span class="chip">Contact</span>
+        <h2>Let's connect</h2>
+        <div class="contact-grid">
+          <div class="card">
+            <p style="margin-bottom:10px;">Email</p>
+            <p style="margin-bottom:20px;"><strong style="color:var(--text);">yuvrajarya656@gmail.com</strong></p>
+            <p style="margin-bottom:8px;">Profiles</p>
+            <p><a href="https://www.linkedin.com/in/yuvraj-arya-b4967434a/" target="_blank" rel="noreferrer">LinkedIn</a></p>
+            <p><a href="https://github.com/aryayuvraj007" target="_blank" rel="noreferrer">GitHub</a></p>
+            <p><a href="https://www.instagram.com/el.yuvraj/" target="_blank" rel="noreferrer">Instagram</a></p>
+          </div>
+          <form class="card" id="contactForm">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" required></textarea>
+            <button class="btn primary" type="submit">Send Message</button>
+          </form>
         </div>
+      </div>
     </section>
+  </main>
 
+  <footer>
+    <div class="wrap">
+      <p>Created by Yuvraj Arya</p>
+    </div>
+  </footer>
 
-    <footer>
-        <div class="container footer-content">
-            <p>&copy; Yuvraj Arya. Built with <i class="fa-solid fa-heart" style="color: #ff6b6b;"></i> & Code.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
