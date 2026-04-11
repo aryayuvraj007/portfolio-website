@@ -7,6 +7,7 @@ if (savedTheme === "dark" || savedTheme === "light") {
 }
 
 function updateThemeButton(theme) {
+  if (!themeBtn) return;
   const isDark = theme === "dark";
   themeBtn.textContent = isDark ? "🌙" : "☀️";
   themeBtn.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
@@ -15,20 +16,23 @@ function updateThemeButton(theme) {
 
 updateThemeButton(root.getAttribute("data-theme"));
 
-themeBtn.addEventListener("click", () => {
-  const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-  root.setAttribute("data-theme", next);
-  localStorage.setItem("theme", next);
-  updateThemeButton(next);
-});
+if (themeBtn) {
+  themeBtn.addEventListener("click", () => {
+    const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+    updateThemeButton(next);
+  });
+}
 
 const menuBtn = document.getElementById("menuBtn");
 const menu = document.getElementById("menu");
-menuBtn.addEventListener("click", () => menu.classList.toggle("open"));
-
-menu.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => menu.classList.remove("open"));
-});
+if (menuBtn && menu) {
+  menuBtn.addEventListener("click", () => menu.classList.toggle("open"));
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => menu.classList.remove("open"));
+  });
+}
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -41,12 +45,15 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
-document.getElementById("contactForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const button = e.target.querySelector("button");
-  button.textContent = "Message Sent";
-  setTimeout(() => {
-    e.target.reset();
-    button.textContent = "Send Message";
-  }, 1800);
-});
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const button = e.target.querySelector("button");
+    button.textContent = "Message Sent";
+    setTimeout(() => {
+      e.target.reset();
+      button.textContent = "Send Message";
+    }, 1800);
+  });
+}
