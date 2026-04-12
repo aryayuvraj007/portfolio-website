@@ -225,6 +225,8 @@ footer p { font-size: 14px; }
 .reveal { opacity: 0; transform: translateY(18px); transition: 0.45s ease; }
 .reveal.show { opacity: 1; transform: none; }
 
+
+
 @media (max-width: 860px) {
   .menu-btn { display: inline-block; }
   .theme-btn { margin-left: auto; }
@@ -243,4 +245,162 @@ footer p { font-size: 14px; }
   }
   .links.open { display: flex; }
   .hero-grid, .grid-2, .contact-grid, .hobby-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Anime page specific styles ── */
+.anime-hero {
+  padding: 72px 0 36px;
+  border-bottom: 1px solid var(--line);
+}
+.anime-hero h1 { margin-top: 12px; }
+.anime-lead { max-width: 56ch; margin-top: 8px; color: var(--muted); }
+
+.anime-stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+.anime-stat {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+}
+.anime-stat strong { font-size: 1.5rem; color: var(--text); }
+.anime-stat span { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+/* Filter bar */
+.anime-filter-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  align-items: center;
+}
+.filter-btn {
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+.filter-btn:hover { border-color: var(--text); color: var(--text); }
+.filter-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* Grid */
+.anime-section { padding: 56px 0 84px; }
+.anime-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.anime-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  cursor: default;
+}
+.anime-card:hover {
+  border-color: var(--text);
+  box-shadow: 0 10px 32px rgba(0,0,0,0.09);
+  transform: translateY(-4px);
+}
+html[data-theme="dark"] .anime-card:hover {
+  box-shadow: 0 10px 36px rgba(0,0,0,0.4);
+}
+.anime-poster {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  display: block;
+  background: var(--soft);
+}
+.anime-poster-placeholder {
+  width: 100%;
+  aspect-ratio: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--soft);
+  font-size: 3rem;
+}
+.anime-info {
+  padding: 14px 14px 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.anime-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+.anime-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.anime-type {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.type-anime { background: rgba(99,102,241,0.12); color: #6366f1; }
+.type-manga { background: rgba(234,88,12,0.12); color: #ea580c; }
+html[data-theme="dark"] .type-anime { background: rgba(99,102,241,0.22); color: #a5b4fc; }
+html[data-theme="dark"] .type-manga { background: rgba(234,88,12,0.22); color: #fb923c; }
+
+.anime-rank {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.anime-genre {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.anime-status {
+  margin-top: auto;
+  padding-top: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted);
+}
+.anime-status::before {
+  content: '';
+  display: inline-block;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+.anime-status.ongoing::before { background: #3b82f6; }
+
+@media (max-width: 600px) {
+  .anime-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+  .anime-stats { gap: 12px; }
 }
