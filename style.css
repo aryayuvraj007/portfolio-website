@@ -5,6 +5,7 @@
   --text: #151515;
   --muted: #5f5f5b;
   --accent: #222222;
+  --btn-primary-fg: #f7f7f5;
   --radius: 12px;
   --max: 1040px;
   --nav-bg: rgba(247, 247, 245, 0.85);
@@ -18,6 +19,7 @@ html[data-theme="dark"] {
   --text: #f2f2f2;
   --muted: #b8b8b8;
   --accent: #f2f2f2;
+  --btn-primary-fg: #111111;
   --nav-bg: rgba(17, 17, 17, 0.85);
   --soft: #141414;
 }
@@ -107,7 +109,18 @@ p { color: var(--muted); }
   font-weight: 600;
   font-size: 14px;
 }
-.btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.btn.primary {
+  background: var(--accent);
+  color: var(--btn-primary-fg);
+  border-color: var(--accent);
+}
+button.btn {
+  font: inherit;
+  cursor: pointer;
+}
+button.btn.primary {
+  color: var(--btn-primary-fg);
+}
 
 .card {
   background: var(--surface);
@@ -208,6 +221,53 @@ footer a { color: var(--muted); text-decoration: none; }
 footer a:hover { color: var(--text); }
 
 .contact-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 16px; }
+
+.connect-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.connect-links li {
+  margin: 0;
+  padding: 0;
+}
+.connect-email {
+  margin-top: 14px;
+  font-size: 14px;
+}
+.connect-email a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.connect-email a:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--soft);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+.social-icon:hover {
+  border-color: var(--text);
+  background: var(--surface);
+}
+.social-icon svg {
+  display: block;
+}
+
 input, textarea {
   width: 100%;
   border: 1px solid var(--line);
@@ -215,7 +275,13 @@ input, textarea {
   padding: 12px;
   font: inherit;
   background: var(--surface);
+  color: var(--text);
   margin-bottom: 10px;
+}
+input::placeholder,
+textarea::placeholder {
+  color: var(--muted);
+  opacity: 1;
 }
 textarea { min-height: 130px; resize: vertical; }
 
